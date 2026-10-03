@@ -1972,7 +1972,7 @@ a.disabled {
 }
 
 header {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   background: rgba(71, 71, 71, 0.9);
   backdrop-filter: blur(1.5px);
@@ -1981,6 +1981,10 @@ header {
   left: 50%;
   transform: translateX(-50%);
   top: 1%;
+  z-index: 1111;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  justify-content: center;
 }
 header a {
   font-size: var(--font-size-btn-nav);
@@ -1995,6 +1999,8 @@ header .right {
   display: flex;
   gap: 50px;
   padding: 9px 32px;
+  justify-content: center;
+  width: 240px;
 }
 header .center {
   color: var(--color-secondary);
@@ -2002,6 +2008,18 @@ header .center {
 header .center svg {
   height: 4em;
   width: 4em;
+}
+header.standby {
+  transition: all 0.2s ease-in-out;
+  width: 70px;
+}
+header.standby .left,
+header.standby .right {
+  width: 0;
+  opacity: 0;
+}
+header.inactive {
+  opacity: 0.6;
 }
 
 .header nav ul {
@@ -2527,6 +2545,7 @@ footer p {
   width: -moz-fit-content;
   width: fit-content;
   align-self: center;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .projectlist .projectcards .projectcard .projectmedia img {
   width: 100%;
@@ -2544,9 +2563,8 @@ footer p {
   align-self: center;
   align-items: center;
   text-align: center;
-  max-width: 430px;
+  width: 650px;
   gap: 25px;
-  width: 100%;
 }
 .projectlist .projectcards .projectcard .projectinfo .projecticons {
   display: flex;
@@ -2566,15 +2584,58 @@ footer p {
 .projectlist .projectcards .projectcard .projecttags .contracttag {
   display: flex;
   align-items: center;
-  background-color: #20325f;
   gap: 8px;
   padding: 8px 15px;
   border-radius: 27px;
   margin-right: 10px;
 }
-.projectlist .projectcards .projectcard .projecttags .contracttag img {
-  width: 40px;
-  height: 40px;
+.projectlist .projectcards .projectcard .projecttags .contracttag.tagnidbleu {
+  background-color: #20325f;
+}
+.projectlist .projectcards .projectcard .projecttags .contracttag.tagnidbleu img {
+  max-height: 40px;
+  aspect-ratio: 40/39;
+}
+.projectlist .projectcards .projectcard .projecttags .contracttag.tagclef {
+  background-color: #141414;
+}
+.projectlist .projectcards .projectcard .projecttags .contracttag.tagclef img {
+  max-height: 40px;
+  aspect-ratio: 61/40;
+}
+
+.news-cards {
+  padding-top: 50px;
+}
+
+.news-card {
+  background-color: #acacac;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 350px;
+  max-width: 460px;
+  height: 505px;
+  padding: 30px;
+  color: var(--color-white);
+  border-radius: 5%;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  background-size: cover;
+}
+.news-card h3 {
+  margin: 0;
+}
+.news-card .card-text {
+  margin: 0;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.news-card .menu {
+  margin: 0;
+}
+.news-card:hover {
+  text-decoration: none;
+  transform: scale(1.05);
 }
 
 /* ==========================================================================
