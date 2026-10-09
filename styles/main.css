@@ -1823,7 +1823,7 @@ a.disabled {
 }
 .aboutme .projectpreview .projectpreviewlist .projectpreviewcard:hover {
   color: var(--color-white);
-  background: linear-gradient(0deg, var(--color-primary) 20%, rgba(0, 136, 204, 0) 60%), url(../../assets/images/NidBleu/NB_Thumb.png) no-repeat;
+  background: linear-gradient(0deg, var(--color-primary) 20%, rgba(0, 136, 204, 0) 60%), url(../assets/images/NidBleu/NB_Thumb.png) no-repeat;
   background-size: cover;
 }
 .aboutme .projectpreview .projectpreviewlist .projectpreviewcard:hover h2 {
@@ -1834,7 +1834,7 @@ a.disabled {
   opacity: 1;
 }
 .aboutme .projectpreview .projectpreviewlist .projectpreviewcard:hover.neptune {
-  background: linear-gradient(0deg, var(--color-primary) 20%, rgba(0, 136, 204, 0) 60%), url(../../assets/images/Traducteur/TR_Thumb.png) no-repeat;
+  background: linear-gradient(0deg, var(--color-primary) 20%, rgba(0, 136, 204, 0) 60%), url(../assets/images/Traducteur/TR_Thumb.png) no-repeat;
   background-size: cover;
 }
 .aboutme {
@@ -2803,7 +2803,6 @@ footer p {
 .comparison-slider {
   position: relative;
   width: 100%;
-  max-width: 600px;
   aspect-ratio: 16/10;
   overflow: hidden;
   border-radius: 12px;
