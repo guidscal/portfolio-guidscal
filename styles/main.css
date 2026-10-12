@@ -1520,6 +1520,10 @@ a.disabled {
 }
 
 .hub {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
   background: linear-gradient(180deg, #08c 0%, rgba(40, 40, 40, 0) 54%), #282828;
 }
 .hub .wrapper {
@@ -1551,6 +1555,9 @@ a.disabled {
   background-color: var(--color-bg-secondary);
   text-align: center;
   border-radius: 15px;
+}
+.hub .logo-name {
+  padding-top: 0;
 }
 
 .contactmodal.modalhidden {
@@ -2518,12 +2525,14 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  text-align: center;
 }
 footer h2 {
   opacity: 0.6;
 }
 footer p {
   opacity: 0.4;
+  max-width: 60vw;
 }
 
 .projectlist {
@@ -2873,6 +2882,274 @@ footer p {
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   color: #333;
+}
+
+.carousel {
+  cursor: grab;
+  touch-action: pan-y; /* le scroll vertical de la page reste possible au tactile */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.carousel .carousel__track {
+  display: flex;
+  gap: 50px;
+}
+.carousel.is-dragging {
+  cursor: grabbing;
+}
+.carousel img {
+  -webkit-user-drag: none; /* empêche le "fantôme" d'image natif */
+}
+
+.projectcard {
+  --card-width: 550px;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--color-bg-secondary);
+  border-radius: 25px;
+  gap: 30px;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.projectcard .projectmedia img {
+  display: block;
+  height: auto;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0 0;
+  max-width: var(--card-width);
+}
+.projectcard .projectinfo {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  max-width: var(--card-width);
+}
+.projectcard .projectinfo .projecticons {
+  display: flex;
+  gap: 10px;
+}
+.projectcard .projectinfo .projecticons .icon--circle {
+  background-color: var(--color-black);
+  padding: 5px;
+}
+.projectcard .projectinfo .projecticons .icon--circle use {
+  color: var(--color-white);
+}
+.projectcard .projecttags {
+  display: flex;
+  align-items: center;
+}
+.projectcard .projecttags .contracttag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 27px;
+  margin-right: 10px;
+}
+.projectcard .projecttags .contracttag.tagnidbleu {
+  background-color: #20325f;
+}
+.projectcard .projecttags .contracttag.tagnidbleu img {
+  max-height: 40px;
+  aspect-ratio: 40/39;
+}
+.projectcard .projecttags .contracttag.tagclef {
+  background-color: #141414;
+}
+.projectcard .projecttags .contracttag.tagclef img {
+  max-height: 40px;
+  aspect-ratio: 61/40;
+}
+
+.tilt {
+  transform-style: preserve-3d; /* nécessaire pour que les enfants ressortent en 3D */
+  will-change: transform;
+}
+
+.neon {
+  position: relative;
+  --mx: 50%;
+  --my: 50%;
+  --i: 0; /* intensité sous le curseur, 0 à 1 (gérée par le JS) */
+  --radius: 140px;
+  filter: brightness(calc(1 + var(--i) * 0.25));
+}
+
+/* Deux copies du texte, visibles seulement autour du curseur */
+.neon::before,
+.neon::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  text-shadow: none; /* évite de doubler le glow d'origine */
+  mix-blend-mode: screen;
+  opacity: var(--i);
+  -webkit-mask-image: radial-gradient(circle var(--radius) at var(--mx) var(--my), #000 0%, transparent 100%);
+  mask-image: radial-gradient(circle var(--radius) at var(--mx) var(--my), #000 0%, transparent 100%);
+}
+
+.neon::before {
+  -webkit-text-stroke-color: #ff2bd6;
+  animation: glitch-a 2.4s infinite steps(1);
+}
+
+.neon::after {
+  -webkit-text-stroke-color: #00fff0;
+  animation: glitch-b 3.1s infinite steps(1);
+}
+
+/* Petit glitch aléatoire au repos (classe ajoutée par le JS), sans masque */
+.neon.is-glitching::before,
+.neon.is-glitching::after {
+  opacity: 0.8;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+@keyframes glitch-a {
+  0%, 100% {
+    clip-path: inset(0 0 100% 0);
+    transform: translate(0);
+  }
+  10% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-5px, 0);
+  }
+  30% {
+    clip-path: inset(55% 0 20% 0);
+    transform: translate(4px, 0);
+  }
+  50% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(-3px, 1px);
+  }
+  70% {
+    clip-path: inset(30% 0 45% 0);
+    transform: translate(5px, -1px);
+  }
+  85% {
+    clip-path: inset(0 0 100% 0);
+    transform: translate(0);
+  }
+}
+@keyframes glitch-b {
+  0%, 100% {
+    clip-path: inset(0 0 100% 0);
+    transform: translate(0);
+  }
+  15% {
+    clip-path: inset(65% 0 15% 0);
+    transform: translate(5px, 0);
+  }
+  35% {
+    clip-path: inset(5% 0 80% 0);
+    transform: translate(-4px, 0);
+  }
+  55% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(3px, -1px);
+  }
+  75% {
+    clip-path: inset(85% 0 0 0);
+    transform: translate(-5px, 0);
+  }
+  90% {
+    clip-path: inset(0 0 100% 0);
+    transform: translate(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .neon::before,
+  .neon::after {
+    animation: none;
+  }
+}
+/* Cache le curseur natif (la classe n'est ajoutée que sur les appareils avec souris) */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  --sx: 0px; /* décalage RVB, géré par le JS */
+  --sy: 0px;
+}
+
+.cursor__layer {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: inherit;
+  mix-blend-mode: screen; /* les couches s'additionnent en blanc quand elles se superposent */
+}
+
+.cursor__layer--main {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.cursor__layer--cyan {
+  border-color: #00fff0;
+  translate: var(--sx) var(--sy);
+}
+
+.cursor__layer--magenta {
+  border-color: #ff2bd6;
+  translate: calc(var(--sx) * -1) calc(var(--sy) * -1);
+}
+
+/* Quand l'anneau est accroché à un élément */
+.cursor.is-locked .cursor__layer--main {
+  background: rgba(0, 255, 240, 0.08);
+}
+
+/* Petit "déchirement" quand le curseur va très vite */
+.cursor.is-fast .cursor__layer--cyan {
+  animation: cursor-slice 0.25s steps(1) infinite;
+}
+
+@keyframes cursor-slice {
+  0% {
+    clip-path: inset(0 0 60% 0);
+  }
+  33% {
+    clip-path: inset(40% 0 20% 0);
+  }
+  66% {
+    clip-path: inset(70% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0);
+  }
+}
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00fff0;
+  pointer-events: none;
 }
 
 /* ==========================================================================

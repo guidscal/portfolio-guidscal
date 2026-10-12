@@ -28,7 +28,7 @@
             </svg>
         </div>
         <div class="right">
-            <a href="projectlist.html" class="headerlink">Projets</a>
+            <a href="aboutme.html#projectCarousel" class="headerlink">Projets</a>
             <a href="assets/cvdownload/Guillaume_Callebert_CV_2026.pdf" download="CV_Guillaume_Callebert_2026.pdf" class="headerlink">CV</a>
         </div>
     </header>
@@ -37,8 +37,8 @@
             <div class="aboutme">
                 <div class="wrapper">
                     <div class="logo-name">
-                        <div class="top">Guillaume Callebert</div>
-                        <div class="bottom">Dev Web/Jeu</div>
+                        <div class="top neon" data-component="NeonGlitch">Guillaume Callebert</div>
+                        <div class="bottom neon" data-component="NeonGlitch">Dev Web/Jeu</div>
                         <div class="slogan">
                             <h3>Un développeur social et impliqué!</h3>
                         </div>
@@ -68,7 +68,7 @@
                                 <div class="button-title">Vidéo de présentation</div>
                             </a>
                         </div>
-                        <div class="media"><img src="assets/images/Main/HeadPicGuids.png" alt="" /></div>
+                        <div class="media" data-component="TiltEffect"><img src="assets/images/Main/HeadPicGuids.png" alt="" /></div>
                         <div class="passions">
                             <h1>Je mange quoi en hiver?</h1>
                             <ul>
@@ -228,28 +228,203 @@
 
                     <sectiom class="projectpreview">
                         <h1>Quelques projets</h1>
-                        <div class="projectpreviewlist">
-                            <a class="projectpreviewcard nidbleu" href="">
-                                <h2>Création d’un site web en HTML, CSS, JS, PHP pour un OBNL</h2>
-                                <svg class="icon icon--lg icon--stroke icon--circle">
-                                    <use href="#icon-RightArrow"></use>
-                                </svg>
-                            </a>
-                            <a class="projectpreviewcard neptune" href="">
-                                <h2>Création d’une application de traduction de symboles en réalité augmentée sur Unity pour un jeu d’évasion</h2>
-                                <svg class="icon icon--lg icon--stroke icon--circle">
-                                    <use href="#icon-RightArrow"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <a class="button" href="projectlist.html">
-                            <div class="button-title">Voir tous mes projets</div>
-                            <div class="button-icon">
-                                <svg class="icon icon--md icon--stroke icon--circle">
-                                    <use href="#icon-RightArrow"></use>
-                                </svg>
+                        <section class="carousel" id="projectCarousel" data-component="ConveyorCarousel">
+                            <div class="carousel__track">
+                                <div class="projectcard">
+                                    <div class="projectmedia">
+                                        <img src="assets/images/NidBleu/NB_Thumb.png" alt="" />
+                                    </div>
+                                    <div class="projectinfo">
+                                        <div class="projecticons">
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-HTML"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-CSS"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-JS"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Figma"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-WordPress"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-PHP"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="projecttags">
+                                            <div class="contracttag tagnidbleu">
+                                                <p>Contrat pour</p>
+                                                <img src="assets/images/NidBleu/NB-icon-contract.png" alt="" />
+                                            </div>
+                                            <h4>· 2026 · Site Web</h4>
+                                        </div>
+                                        <h2 class="light">
+                                            <strong>Création d’un site web</strong>
+                                            en HTML, CSS, JS et PHP pour un OBNL
+                                        </h2>
+                                        <a class="button" href="projectdemo.html">
+                                            <div class="button-title">Voir le projet</div>
+                                            <div class="button-icon">
+                                                <svg class="icon icon--md icon--circle icon--stroke">
+                                                    <use href="#icon-RightArrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="projectcard">
+                                    <div class="projectmedia">
+                                        <img src="assets/images/Traducteur/TR_Thumb.png" alt="" />
+                                    </div>
+                                    <div class="projectinfo">
+                                        <div class="projecticons">
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Unity"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Blender"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle icon--stroke">
+                                                <use href="#icon-AR"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-CSharp"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="projecttags">
+                                            <div class="contracttag tagclef">
+                                                <p>Contrat pour</p>
+                                                <img src="assets/images/Traducteur/TR-icon-contract.png" alt="" />
+                                            </div>
+                                            <h4>· 2025 · Application Multimédia</h4>
+                                        </div>
+                                        <h2 class="light">
+                                            <strong>Création d’une application</strong>
+                                            de traduction de symboles en
+                                            <strong>réalité augmentée</strong>
+                                            sur Unity
+                                        </h2>
+                                        <a class="button" href="projectdemo.html">
+                                            <div class="button-title">Voir le projet</div>
+                                            <div class="button-icon">
+                                                <svg class="icon icon--md icon--circle icon--stroke">
+                                                    <use href="#icon-RightArrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="projectcard">
+                                    <div class="projectmedia">
+                                        <img src="assets/images/Webjam/WJ_Thumb.png" alt="" />
+                                    </div>
+                                    <div class="projectinfo">
+                                        <div class="projecticons">
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-HTML"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-CSS"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-JS"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Figma"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-WordPress"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-PHP"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="projecttags">
+                                            <h4>2025 · Compétition Scolaire · Site Web</h4>
+                                        </div>
+                                        <h2 class="light">
+                                            <strong>Création avec une équipe en 36h d’un site web</strong>
+                                            en HTML, CSS, JS et intégration de WordPress avec PHP
+                                        </h2>
+                                        <a class="button" href="projectdemo.html">
+                                            <div class="button-title">Voir le projet</div>
+                                            <div class="button-icon">
+                                                <svg class="icon icon--md icon--circle icon--stroke">
+                                                    <use href="#icon-RightArrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="projectcard">
+                                    <div class="projectmedia">
+                                        <img src="assets/images/Ville/VL_Thumb.png" alt="" />
+                                    </div>
+                                    <div class="projectinfo">
+                                        <div class="projecticons">
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Unreal"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Blender"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="projecttags">
+                                            <h4>2025 · Projet Scolaire · Multimédia (Unreal + Blender)</h4>
+                                        </div>
+                                        <h2 class="light">
+                                            <strong>Création d’un jeu sur Unreal</strong>
+                                            à l’aide de bâtiments d’autres étudiants et optimisation de ceux-ci
+                                        </h2>
+                                        <a class="button" href="projectdemo.html">
+                                            <div class="button-title">Voir le projet</div>
+                                            <div class="button-icon">
+                                                <svg class="icon icon--md icon--circle icon--stroke">
+                                                    <use href="#icon-RightArrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="projectcard" data-tilt>
+                                    <div class="projectmedia">
+                                        <img src="assets/images/JV3/JV_Thumb.png" alt="" />
+                                    </div>
+                                    <div class="projectinfo">
+                                        <div class="projecticons">
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Unreal"></use>
+                                            </svg>
+                                            <svg class="icon icon--md icon--circle">
+                                                <use href="#icon-Blender"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="projecttags">
+                                            <h4>2025 · Projet Scolaire · Jeu Vidéo</h4>
+                                        </div>
+                                        <h2 class="light">
+                                            <strong>Création et programmation</strong>
+                                            d’un
+                                            <strong>niveau de jeu</strong>
+                                            d’évasion sur Unreal
+                                        </h2>
+                                        <a class="button" href="projectdemo.html">
+                                            <div class="button-title">Voir le projet</div>
+                                            <div class="button-icon">
+                                                <svg class="icon icon--md icon--circle icon--stroke">
+                                                    <use href="#icon-RightArrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
+                        </section>
+
                     </sectiom>
 
                     <section class="contact">
@@ -305,7 +480,7 @@
             </div>
             <footer>
                 <h2>Tous droits réservés © Guillaume Callebert</h2>
-                <p>L’intelligence artificielle n’a pas été utilisée pour la création de cette page web.</p>
+                <p>L’intelligence artificielle a été utilisée de manière intelligente pour assister la création de cette page web. Son usage est limité à l'implémentation d'animations plus techniques utilisants des librairies comme GSAP qui me sont nouvelles. Tout code produit par l'IA a été vérifié et adapté pour son utilisation dans le contexte de cette page web. Tout autres éléments de la page ont été créés manuellement à l'aide des mes propres compétences techniques.</p>
             </footer>
         </div>
     </div>
