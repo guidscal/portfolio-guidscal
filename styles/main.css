@@ -408,6 +408,18 @@ body {
   background-color: var(--color-bg-primary);
   position: relative;
 }
+body::-moz-selection {
+  background: rgba(107, 223, 255, 0.3);
+  color: #0b1a22;
+}
+body::selection {
+  background: rgba(107, 223, 255, 0.3);
+  color: #0b1a22;
+}
+body::-moz-selection {
+  background: rgba(107, 223, 255, 0.3);
+  color: #0b1a22;
+}
 
 a {
   color: inherit;
@@ -1434,23 +1446,48 @@ a.disabled {
   padding-top: 80px;
   line-height: 1.25;
 }
+.logo-name .neon {
+  filter: url(#neon-base);
+  color: #000;
+  text-align: center;
+}
+@media screen and (min-width: 1920px) {
+  .logo-name .neon {
+    filter: url(#neon-xl);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .logo-name .neon {
+    filter: url(#neon-lg);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .logo-name .neon {
+    filter: url(#neon-ml);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .logo-name .neon {
+    filter: url(#neon-md);
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo-name .neon {
+    filter: url(#neon-sm);
+  }
+}
+@media screen and (max-width: 375px) {
+  .logo-name .neon {
+    filter: url(#neon-xs);
+  }
+}
 .logo-name .top {
   font-size: var(--font-size-logo-top);
   font-weight: 700;
-  text-align: center;
-  text-shadow: 0 0 14px rgba(107, 223, 255, 0.8);
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: var(--color-secondary, #6bdfff);
-  color: rgba(255, 255, 255, 0);
 }
 .logo-name .bottom {
   font-size: var(--font-size-logo-bottom);
   font-weight: 800;
-  text-align: center;
-  text-shadow: 0 0 14px rgba(107, 223, 255, 0.8);
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: var(--color-secondary, #6bdfff);
-  color: rgba(255, 255, 255, 0);
 }
 
 /* ==========================================================================
@@ -1521,7 +1558,7 @@ a.disabled {
 
 .hub {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   align-items: center;
   background: linear-gradient(180deg, #08c 0%, rgba(40, 40, 40, 0) 54%), #282828;
@@ -1532,12 +1569,39 @@ a.disabled {
   gap: 35px;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .hub .wrapper {
+    padding: 25px;
+  }
+}
 .hub .wrapper .button-bar {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   gap: 20px;
+}
+@media screen and (max-width: 1440px) {
+  .hub .wrapper .button-bar {
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 70%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hub .wrapper .button-bar {
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hub .wrapper .button-bar {
+    flex-direction: column;
+    gap: 15px;
+    width: 60%;
+  }
 }
 .hub .wrapper .intro-text {
   max-width: 700px;
@@ -1625,6 +1689,8 @@ a.disabled {
   background-color: var(--color-primary);
   gap: 10px;
   padding: 10px;
+  text-align: center;
+  white-space: nowrap;
 }
 .button:hover {
   cursor: pointer;
@@ -1684,6 +1750,11 @@ a.disabled {
   flex-direction: column;
   gap: 120px;
 }
+@media screen and (max-width: 1024px) {
+  .aboutme .wrapper {
+    gap: 60px;
+  }
+}
 .aboutme {
   /*Section about info*/
 }
@@ -1692,6 +1763,12 @@ a.disabled {
   gap: 30px;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .aboutme .aboutinfo {
+    flex-direction: column;
+    align-content: center;
+  }
 }
 .aboutme .aboutinfo .who {
   width: 350px;
@@ -1702,6 +1779,17 @@ a.disabled {
   text-align: center;
   align-self: stretch;
 }
+@media screen and (max-width: 1024px) {
+  .aboutme .aboutinfo .who {
+    align-self: center;
+    gap: 20px;
+    width: 70%;
+  }
+  .aboutme .aboutinfo .who .button {
+    display: inline-flex;
+    align-self: center;
+  }
+}
 .aboutme .aboutinfo .who p {
   height: 100%;
   text-align: center;
@@ -1709,14 +1797,23 @@ a.disabled {
   padding-top: 25px;
 }
 .aboutme .aboutinfo .media {
-  aspect-ratio: 16/9;
   max-width: 33%;
+}
+@media screen and (max-width: 1024px) {
+  .aboutme .aboutinfo .media {
+    order: -1;
+  }
 }
 .aboutme .aboutinfo .media img {
   border-radius: 24px;
 }
 .aboutme .aboutinfo .passions {
   align-self: stretch;
+}
+@media screen and (max-width: 1024px) {
+  .aboutme .aboutinfo .passions {
+    align-self: center;
+  }
 }
 .aboutme .aboutinfo .passions ul {
   display: flex;
@@ -1741,6 +1838,11 @@ a.disabled {
 .aboutme .softskills .softskilllist {
   display: flex;
   gap: 35px;
+}
+@media screen and (max-width: 1024px) {
+  .aboutme .softskills .softskilllist {
+    flex-direction: column;
+  }
 }
 .aboutme .softskills .softskilllist .softskill {
   display: flex;
@@ -1868,6 +1970,12 @@ a.disabled {
   align-items: center;
   gap: 100px;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .aboutme .contact .contactmethods {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 .aboutme .contact .contactmethods .contactmethod {
   display: flex;
@@ -2611,9 +2719,6 @@ footer p {
 .projectlist .projectcards .projectcard .projecttags .contracttag.tagclef img {
   max-height: 40px;
   aspect-ratio: 61/40;
-}
-.projectlist .projectcards .projectcard .projecttags .contracttag.tagwinner {
-  background-color: #f0c000;
 }
 
 .imagegallery {

@@ -16,6 +16,107 @@
 </head>
 
 <body style="position: relative">
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+        <!-- xl (≥ 1920px) -->
+        <filter id="neon-xl" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="9" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- base (1441px à 1919px) : ton rendu desktop actuel -->
+        <filter id="neon-base" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="7" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- lg (≤ 1440px) -->
+        <filter id="neon-lg" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="6" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- ml (≤ 1200px) -->
+        <filter id="neon-ml" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="5" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- md (≤ 1024px) -->
+        <filter id="neon-md" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="4" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- sm (≤ 768px) -->
+        <filter id="neon-sm" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="3" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- xs (≤ 375px) -->
+        <filter id="neon-xs" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="2" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+    </svg>
+
+
     <div class="contactmodal modalhidden" data-component="ContactModal">
         <div class="contactmodalbox">
             <div class="contactintro">
@@ -60,14 +161,14 @@
                     </div>
                 </div>
             </div>
-            <div class="button modalclose">
+            <a class="button modalclose">
                 <div class="button-icon">
                     <svg class="icon icon--md icon--circle">
                         <use href="#icon-Exit"></use>
                     </svg>
                 </div>
                 <div class="button-title">Fermer</div>
-            </div>
+            </a>
         </div>
     </div>
     <div class="hub">
@@ -105,8 +206,7 @@
                     ou en
                     <strong>développement de jeux vidéos</strong>
                     à partir du mois de
-                    <strong>mars 2027</strong>
-                    .
+                    <strong>mars 2027.</strong>
                 </p>
             </div>
             <div class="button-bar">
