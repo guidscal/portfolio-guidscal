@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guillaume Callebert</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+
+<body>
+
+    <header class="" data-component="BubbleHeader" data-threshold="0.1">
+        <div class="left">
+            <a class="headerlink" href="index.html">Hub</a>
+            <a class="headerlink" href="aboutme.html">À propos</a>
+        </div>
+        <div class="center">
+            <svg class="icon icon--lg">
+                <use href="#icon-HeaderLogo"></use>
+            </svg>
+        </div>
+        <div class="right">
+            <a href="aboutme.html#projectCarousel" class="headerlink">Projets</a>
+            <a href="assets/cvdownload/Guillaume_Callebert_CV_2026.pdf" download="CV_Guillaume_Callebert_2026.pdf" class="headerlink">CV</a>
+        </div>
+    </header>
+    <div id="smooth-wrapper" data-component="SmoothScroller">
+        <div id="smooth-content">
+
+            <div class="projectdemo">
+                <div class="wrapper">
+                    <div class="projecthero">
+                        <div class="projectmedia">
+                            <img src="assets/images/Ville/VL_Thumb.png" alt="" />
+                        </div>
+                        <div class="projectinfobox">
+                            <div class="left">
+                                <h1 class="alt">Création d’un jeu sur Unreal à l’aide de bâtiments d’autres étudiants et optimisation de ceux-ci</h1>
+                                <hr />
+                                <div class="aideclaration">
+                                    <svg class="icon icon--md icon--stroke">
+                                        <use href="#icon-AIBrain"></use>
+                                    </svg>
+                                    <h5>IA: Aucune utilisation d’IA dans ce projet.</h5>
+                                </div>
+                                <hr />
+                                <a class="button" href="https://lenidbleu.org/">
+                                    <div class="button-icon">
+                                        <svg class="icon icon--md icon--stroke">
+                                            <use href="#icon-External"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="button-title">À VOIR</div>
+                                </a>
+                            </div>
+                            <div class="right">
+                                <div class="projecttags">
+                                    <h4>Projet scolaire · 2025 · Jeu vidéo</h4>
+                                </div>
+                                <hr />
+                                <div class="projecticons">
+                                    <svg class="icon icon--lg">
+                                        <use href="#icon-Unreal"></use>
+                                    </svg>
+                                    <svg class="icon icon--lg">
+                                        <use href="#icon-Blender"></use>
+                                    </svg>
+                                </div>
+                                <hr />
+                                <div class="credits">
+                                    <h5>Intégration et optimisation d’un pipeline vers Unreal: Guillaume Callebert</h5>
+                                    <h5>Prorgrammation des systèmes de jeu: Guillaume Callebert</h5>
+                                    <h5>Bâtiments: Étudiants du cours d’Animation Multimédia</h5>
+                                    <h5>Squelette de la ville: François Arsenault</h5>
+                                    <h5>Autres éléments 3D: sketchfab.com</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectintro">
+                        <h1>Avant de commencer...</h1>
+                        <p>
+                            Ce projet a été réalisé dans mon cours d’animation 3D. Pendant que le reste de la classe travaillait sur un autre projet, nous étions deux à
+                            devoir intégrer les bâtiments de tous les étudiants dans une ville où les visiteurs de ChaosMédia pourraient se promener, interagir et jouer à
+                            un petit jeu. C’était aussi notre première session sur Unreal.
+                        </p>
+                    </div>
+                    <div class="projectcontent">
+                        <h1>Le processus</h1>
+                        <div class="projectsteps">
+                            <div class="step step1">
+                                <div class="text">
+                                    <h2>1. Rassembler et sélectionner les bâtiments</h2>
+                                    <p>
+                                        Chaque bâtiment m’a été remis dans un fichier Blender distinct, conçu pour la qualité visuelle et non pour un moteur de jeu. Comme
+                                        leurs créateurs en étaient à leurs débuts sur Blender, la structure variait d’un fichier à l’autre. J’ai rassemblé les fichiers et
+                                        choisi ceux que j’allais utiliser pour bâtir la ville.
+                                    </p>
+                                </div>
+                                <div class="media">
+                                    <img src="assets/images/Ville/VL_Step1.png" alt="" />
+                                    <h4>Certains des bâtiments choisis</h4>
+                                </div>
+                            </div>
+                            <div class="step step2">
+                                <div class="media">
+                                    <img src="assets/images/Ville/VL_Step2.png" alt="" />
+                                    <h4>Exemple d'un fichier blenders initial</h4>
+                                </div>
+                                <div class="text">
+                                    <h2>2. Créer un protocole de transfert de Blender vers Unreal</h2>
+                                    <p>
+                                        Les bâtiments étant tous différents et aucune documentation ne couvrant ce cas précis, j’ai créé mon propre protocole de transfert.
+                                        Certains fichiers dépassaient 1 Go : le format glTF, avec des paramètres ajustés à l’exportation dans Blender et surtout à
+                                        l’importation dans Unreal, a permis de conserver les textures tout en gardant une bonne performance. J’ai aussi contourné les LODs
+                                        automatiques d’Unreal, qui déformaient les modèles non préparés.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step step3 fullwidth">
+                                <div class="text">
+                                    <h2>3. Ajuster les bâtiments pour leur utilisation dans le jeu</h2>
+                                    <p>
+                                        Une fois dans Unreal, le verre et les collisions étaient brisés. J’ai recréé des matériaux qui reproduisent l’effet de verre de
+                                        Blender et refait les collisions presque entièrement à la main, pour que les visiteurs ne traversent pas les murs. J’ai ensuite mis
+                                        tous les bâtiments à la même échelle et les ai positionnés de façon à bien remplir la ville.
+                                    </p>
+                                </div>
+                                <div class="media">
+                                    <div class="comparison-slider" data-component="BeforeAfter">
+                                        <!-- Back layer: AFTER image -->
+                                        <div class="comparison-layer after">
+                                            <img src="./assets/images/Ville/VL_Step3_After.png" alt="After" />
+                                        </div>
+
+                                        <!-- Front layer: BEFORE image (masked) -->
+                                        <div class="comparison-layer before">
+                                            <img src="./assets/images/Ville/VL_Step3_Before.png" alt="Before" />
+                                        </div>
+
+                                        <!-- Draggable handle -->
+                                        <div class="comparison-handle"></div>
+                                    </div>
+                                    <h4>Exemple d'optimisation des bâtiments</h4>
+                                </div>
+                            </div>
+                            <div class="step step4">
+                                <div class="text">
+                                    <h2>4. Ajouter les éléments visuels</h2>
+                                    <p>
+                                        J’ai ajouté de l’éclairage, des décors, du brouillard et des animations, afin que la ville forme un environnement cohérent plutôt
+                                        qu’une simple collection de bâtiments. Ces éléments donnent de la vie à la ville et créent l’ambiance dans laquelle les visiteurs
+                                        allaient se promener, tout en gardant la performance du jeu en tête.
+                                    </p>
+                                </div>
+                                <div class="imageswiper">
+                                    <div class="imagegallery">
+                                        <div class="swiper" data-component="Carousel" data-news>
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Ville/VL_Step4_1.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Ville/VL_Step4_2.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Ville/VL_Step4_3.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Ville/VL_Step4_4.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Ville/VL_Step4_5.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Ville/VL_Step4_6.png" alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wrapper">
+                                                <!-- Pagination -->
+                                                <div class="swiper-pagination"></div>
+                                                <!-- Navigation -->
+                                                <div class="swiper-buttons">
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-button-next"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step step5">
+                                <div class="media">
+                                    <img src="assets/images/Ville/VL_Step5.png" alt="" />
+                                    <h4>Tableau de bord intégré</h4>
+                                </div>
+                                <div class="text">
+                                    <h2>5. Programmer les éléments de gameplay</h2>
+                                    <p>
+                                        Pour rendre la ville interactive, j’ai programmé un jeu de type « cherche et trouve » avec une lampe de poche que les joueurs
+                                        peuvent allumer ou éteindre, un système de ramassage d’objets et un système de points. J’ai aussi ajouté un tableau de bord
+                                        indiquant leur progression, pour qu’ils sachent toujours où ils en sont rendus.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difficultes">
+                        <h1>Les enjeux du projet</h1>
+                        <p>
+                            Le principal défi était de transformer des modèles conçus pour la qualité visuelle en éléments utilisables dans un jeu : poids des fichiers,
+                            LODs déformés, matériaux et collisions brisés. Je n’avais pas de cible précise, mais le jeu devait offrir une performance adéquate, dans un
+                            contexte où personne ne maîtrisait encore Unreal et sans documentation pour ce cas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <h2>Tous droits réservés © Guillaume Callebert</h2>
+                <p>L’intelligence artificielle a été utilisée de manière intelligente pour assister la création de cette page web. Son usage est limité à l'implémentation d'animations plus techniques utilisants des librairies comme GSAP qui me sont nouvelles. Tout code produit par l'IA a été vérifié et adapté pour son utilisation dans le contexte de cette page web. Tout autres éléments de la page ont été créés manuellement à l'aide des mes propres compétences techniques.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

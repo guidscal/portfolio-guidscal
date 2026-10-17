@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guillaume Callebert</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+
+<body>
+
+    <header class="" data-component="BubbleHeader" data-threshold="0.1">
+        <div class="left">
+            <a class="headerlink" href="index.html">Hub</a>
+            <a class="headerlink" href="aboutme.html">À propos</a>
+        </div>
+        <div class="center">
+            <svg class="icon icon--lg">
+                <use href="#icon-HeaderLogo"></use>
+            </svg>
+        </div>
+        <div class="right">
+            <a href="aboutme.html#projectCarousel" class="headerlink">Projets</a>
+            <a href="assets/cvdownload/Guillaume_Callebert_CV_2026.pdf" download="CV_Guillaume_Callebert_2026.pdf" class="headerlink">CV</a>
+        </div>
+    </header>
+    <div id="smooth-wrapper" data-component="SmoothScroller">
+        <div id="smooth-content">
+
+            <div class="projectdemo">
+                <div class="wrapper">
+                    <div class="projecthero">
+                        <div class="projectmedia">
+                            <img src="assets/images/Traducteur/TR_Thumb.png" alt="" />
+                        </div>
+                        <div class="projectinfobox">
+                            <div class="left">
+                                <h1 class="alt">Création d’une application de traduction de symboles en réalité augmentée sur Unity</h1>
+                                <hr />
+                                <div class="aideclaration">
+                                    <svg class="icon icon--md icon--stroke">
+                                        <use href="#icon-AIBrain"></use>
+                                    </svg>
+                                    <h5>IA: Aucune utilisation d’IA dans ce projet.</h5>
+                                </div>
+                                <hr />
+                                <a class="button" href="https://github.com/guidscal/Projet-Traducteur-Neptune">
+                                    <div class="button-icon">
+                                        <svg class="icon icon--md icon--stroke">
+                                            <use href="#icon-External"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="button-title">Voir le projet sur GitHub</div>
+                                </a>
+                            </div>
+                            <div class="right">
+                                <div class="projecttags">
+                                    <div class="contracttag tagclef">
+                                        <p>Contrat pour</p>
+                                        <img src="assets/images/Traducteur/TR-icon-contract.png" alt="" />
+                                    </div>
+                                    <h4>· 2025 · Application Multimédia</h4>
+                                </div>
+                                <hr />
+                                <div class="projecticons">
+                                    <svg class="icon icon--lg">
+                                        <use href="#icon-Unity"></use>
+                                    </svg>
+                                    <svg class="icon icon--lg">
+                                        <use href="#icon-Blender"></use>
+                                    </svg>
+                                    <svg class="icon icon--lg icon--stroke">
+                                        <use href="#icon-AR"></use>
+                                    </svg>
+                                    <svg class="icon icon--lg">
+                                        <use href="#icon-CSharp"></use>
+                                    </svg>
+                                </div>
+                                <hr />
+                                <div class="credits">
+                                    <h5>Éléments physique de la salle: La Clef de l’Énigme</h5>
+                                    <h5>Modèle 3D: Guillaume Callebert</h5>
+                                    <h5>Librairie AR: Google</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectintro">
+                        <h1>Avant de commencer...</h1>
+                        <p>
+                            Ce projet est un contrat réalisé pour mon employeur actuel, le jeu d’évasion La Clef de l’Énigme. Dans la pièce, un grand panneau mural et les
+                            coins des murs sont couverts de symboles. Mon mandat : créer une application pour tablette qui les reconnaît et affiche leur traduction en
+                            réalité augmentée, de façon fiable et simple pour tous.
+                        </p>
+                    </div>
+                    <div class="projectcontent">
+                        <h1>Le processus</h1>
+                        <div class="projectsteps">
+                            <div class="step step1">
+                                <div class="text">
+                                    <h2>1. Recherche sur la réalité augmentée</h2>
+                                    <p>
+                                        Puisque je n’avais jamais travaillé avec la réalité augmentée, j’ai pris le temps de comprendre comment fonctionnent la détection
+                                        d’images et le suivi dans l’espace avant de me lancer dans Unity. Comme l’application ne pouvait pas se permettre de bogues, il
+                                        valait mieux bien comprendre la technologie dès le départ que de tout corriger par essais et erreurs.
+                                    </p>
+                                </div>
+                                <div class="media">
+                                    <img src="assets/images/Traducteur/TR_Step1.png" alt="" />
+                                    <h4>Résultats de ma recherche sur la réalité augmentée</h4>
+                                </div>
+                            </div>
+                            <div class="step step2 fullwidth">
+                                <div class="text">
+                                    <h2>2. Collection et préparation des images de référence</h2>
+                                    <p>
+                                        La tablette reconnaît les symboles en les comparant à des images de référence, alors leur qualité détermine directement la fiabilité
+                                        de la détection. J’ai donc pris des images nettes et propres, puis retiré tout ce qui n’avait pas besoin d’être détecté, puisque ces
+                                        éléments auraient pu brouiller la reconnaissance et faire apparaître le modèle 3D au mauvais endroit.
+                                    </p>
+                                </div>
+                                <div class="media">
+                                    <div class="comparison-slider" data-component="BeforeAfter">
+                                        <!-- Back layer: AFTER image -->
+                                        <div class="comparison-layer after">
+                                            <img src="./assets/images/Traducteur/TR_Step2_After.png" alt="After" />
+                                        </div>
+
+                                        <!-- Front layer: BEFORE image (masked) -->
+                                        <div class="comparison-layer before">
+                                            <img src="./assets/images/Traducteur/TR_Step2_Before.png" alt="Before" />
+                                        </div>
+
+                                        <!-- Draggable handle -->
+                                        <div class="comparison-handle"></div>
+                                    </div>
+                                    <h4>Préparation de l'image</h4>
+                                </div>
+                            </div>
+                            <div class="step step3">
+                                <div class="text">
+                                    <h2>3. Préparation de la recognition des symboles et du positionnement des objets</h2>
+                                    <p>
+                                        Le panneau est massif et ne peut pas être déplacé, ce qui m’empêchait de répéter mes tests directement dessus. J’ai donc commencé
+                                        avec une image 2D que le logiciel pouvait reconnaître facilement, ce qui me permettait de faire mes premiers tests sans dépendre de
+                                        l’objet et de valider la logique de détection et de positionnement avant de passer à l’objet réel.
+                                    </p>
+                                </div>
+                                <div class="media">
+                                    <img src="assets/images/Traducteur/TR_Step3.jpg" alt="" />
+                                    <h4>Preuve de concept initial</h4>
+                                </div>
+                            </div>
+                            <div class="step step4">
+                                <div class="media">
+                                    <img src="assets/images/Traducteur/TR_Step4.png" alt="" />
+                                    <h4>Reproduction en 3D de l’objet</h4>
+                                </div>
+                                <div class="text">
+                                    <h2>4. Reproduction en 3D des objets et traduction des symboles</h2>
+                                    <p>
+                                        Pour que l’effet soit convaincant, les joueurs doivent retrouver chaque symbole traduit exactement à l’endroit où se trouve le
+                                        symbole d’origine, puisqu’un léger décalage suffit à créer de la confusion. J’ai donc porté une attention particulière à la
+                                        précision de la reproduction 3D, afin que ce que représente le modèle soit clair au premier coup d’œil.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step step5">
+                                <div class="text">
+                                    <h2>5. “Fine tuning” de la position et échelle</h2>
+                                    <p>
+                                        La tablette ne détecte jamais l’objet exactement à la même distance ni sous le même angle. J’ai donc rendu la position et l’échelle
+                                        ajustables à l’aide de variables « serialized » dans Unity, ce qui me permettait de les affiner rapidement et avec précision une
+                                        fois sur place, sans avoir à fouiller dans le code.
+                                    </p>
+                                </div>
+                                <div class="imageswiper">
+                                    <div class="imagegallery">
+                                        <div class="swiper" data-component="Carousel" data-news>
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Traducteur/TR_Step5_1.jpg" alt="" />
+                                                        <div class="mediasubtitle">
+                                                            <h4>Première version en preuve de concept</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Traducteur/TR_Step5_2.jpg" alt="" />
+                                                        <div class="mediasubtitle">
+                                                            <h4>Version finale corrigée</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imageslide">
+                                                        <img src="assets/images/Traducteur/TR_Step5_3.jpg" alt="" />
+                                                        <div class="mediasubtitle">
+                                                            <h4>Positionnement précis avec des serialized fields</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wrapper">
+                                                <!-- Pagination -->
+                                                <div class="swiper-pagination"></div>
+                                                <!-- Navigation -->
+                                                <div class="swiper-buttons">
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-button-next"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="difficultes">
+                        <h1>Les enjeux du projet</h1>
+                        <p>
+                            Le public visé était très large, et certaines personnes ont peu de connaissances technologiques. L’application devait donc fonctionner en tout
+                            temps, sans bogues et rapidement, tout en traduisant les symboles parfaitement pour que le modèle 3D soit compris tout de suite. S’y ajoutaient
+                            l’apprentissage d’une nouvelle technologie et l’impossibilité de tester librement sur l’objet réel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <h2>Tous droits réservés © Guillaume Callebert</h2>
+                <p>L’intelligence artificielle a été utilisée de manière intelligente pour assister la création de cette page web. Son usage est limité à l'implémentation d'animations plus techniques utilisants des librairies comme GSAP qui me sont nouvelles. Tout code produit par l'IA a été vérifié et adapté pour son utilisation dans le contexte de cette page web. Tout autres éléments de la page ont été créés manuellement à l'aide des mes propres compétences techniques.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
