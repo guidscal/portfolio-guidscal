@@ -2117,6 +2117,13 @@ header .right {
   justify-content: center;
   width: 240px;
 }
+@media screen and (max-width: 1024px) {
+  header .left,
+  header .right {
+    gap: 15px;
+    width: 150px;
+  }
+}
 header .center {
   color: var(--color-secondary);
 }
@@ -2770,6 +2777,11 @@ footer p {
   border-radius: 20px;
   aspect-ratio: 16/9;
 }
+@media screen and (max-width: 1024px) {
+  .projectdemo .projecthero .projectmedia {
+    padding-top: 100px;
+  }
+}
 .projectdemo .projecthero .projectinfobox {
   margin-top: -200px;
   position: relative;
@@ -2778,6 +2790,14 @@ footer p {
   padding-bottom: 100px;
   align-items: center;
   width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .projectdemo .projecthero .projectinfobox {
+    flex-direction: column;
+    margin-top: -200px;
+    padding-bottom: 20px;
+    gap: 20px;
+  }
 }
 .projectdemo .projecthero .projectinfobox .projecttags {
   display: flex;
@@ -2815,12 +2835,27 @@ footer p {
   align-self: center;
   gap: 10px;
 }
+@media screen and (max-width: 1024px) {
+  .projectdemo .projecthero .projectinfobox .left,
+  .projectdemo .projecthero .projectinfobox .right {
+    width: 75%;
+  }
+}
 .projectdemo .projecthero .projectinfobox .left {
   align-items: flex-start;
+}
+@media screen and (max-width: 1024px) {
+  .projectdemo .projecthero .projectinfobox .left {
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+  }
 }
 .projectdemo .projecthero .projectinfobox .right {
   align-items: flex-end;
   text-align: right;
+  align-items: center;
+  text-align: center;
 }
 .projectdemo .projecthero .projectinfobox hr {
   max-width: 175px;
@@ -2852,10 +2887,15 @@ footer p {
 .projectdemo .difficultes {
   display: flex;
   flex-direction: column;
-  margin-top: 125px;
+  margin: 125px 0;
   align-items: center;
   gap: 15px;
-  margin-bottom: 125px;
+}
+@media screen and (max-width: 1024px) {
+  .projectdemo .projectintro,
+  .projectdemo .difficultes {
+    margin: 70px 0;
+  }
 }
 .projectdemo .projectintro h1,
 .projectdemo .difficultes h1 {
@@ -2864,6 +2904,17 @@ footer p {
 .projectdemo .projectintro p,
 .projectdemo .difficultes p {
   max-width: 40%;
+}
+@media screen and (max-width: 1024px) {
+  .projectdemo .projectintro p,
+  .projectdemo .difficultes p {
+    max-width: 85%;
+  }
+}
+.projectdemo .projectcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .projectdemo .projectcontent h1 {
   display: flex;
@@ -2886,6 +2937,12 @@ footer p {
   justify-content: center;
   align-items: center;
   gap: 70px;
+}
+@media screen and (max-width: 1024px) {
+  .projectdemo .step {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 }
 .projectdemo .step .imageswiper {
   min-width: 0;
@@ -2915,6 +2972,11 @@ footer p {
 }
 .projectdemo .step.fullwidth .text {
   max-width: 75%;
+}
+@media screen and (max-width: 1024px) {
+  .projectdemo .step.reversed .media {
+    order: 1;
+  }
 }
 
 .contracttag {
