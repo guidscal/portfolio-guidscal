@@ -1775,9 +1775,10 @@ a.disabled {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   align-self: stretch;
+  gap: 30px;
 }
 @media screen and (max-width: 1024px) {
   .aboutme .aboutinfo .who {
@@ -1808,7 +1809,7 @@ a.disabled {
   border-radius: 24px;
 }
 .aboutme .aboutinfo .passions {
-  align-self: stretch;
+  justify-content: center;
 }
 @media screen and (max-width: 1024px) {
   .aboutme .aboutinfo .passions {
