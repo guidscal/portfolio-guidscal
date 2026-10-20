@@ -197,9 +197,17 @@
                     <div class="projectintro">
                         <h1>Avant de commencer...</h1>
                         <p>
-                            Ce projet est un contrat réalisé pour mon employeur actuel, le jeu d’évasion La Clef de l’Énigme. Dans la pièce, un grand panneau mural et les
-                            coins des murs sont couverts de symboles. Mon mandat : créer une application pour tablette qui les reconnaît et affiche leur traduction en
-                            réalité augmentée, de façon fiable et simple pour tous.
+                            Ce projet est un
+                            <strong>contrat réalisé pour mon employeur actuel</strong>
+                            , le jeu d’évasion
+                            <strong>La Clef de l’Énigme</strong>
+                            . Dans la pièce, un grand panneau mural et les coins des murs sont couverts de symboles. Mon mandat : créer
+                            <strong>une application pour tablette</strong>
+                            qui les reconnaît et affiche leur
+                            <strong>traduction en réalité augmentée</strong>
+                            , de façon
+                            <strong>fiable et simple pour tous</strong>
+                            .
                         </p>
                     </div>
                     <div class="projectcontent">
@@ -209,9 +217,15 @@
                                 <div class="text">
                                     <h2>1. Recherche sur la réalité augmentée</h2>
                                     <p>
-                                        Puisque je n’avais jamais travaillé avec la réalité augmentée, j’ai pris le temps de comprendre comment fonctionnent la détection
-                                        d’images et le suivi dans l’espace avant de me lancer dans Unity. Comme l’application ne pouvait pas se permettre de bogues, il
-                                        valait mieux bien comprendre la technologie dès le départ que de tout corriger par essais et erreurs.
+                                        Puisque
+                                        <strong>je n’avais jamais travaillé avec la réalité augmentée</strong>
+                                        , j’ai
+                                        <strong>pris le temps de comprendre comment fonctionnent la détection d’images et le suivi dans l’espace</strong>
+                                        avant de me lancer dans Unity. Comme l’application
+                                        <strong>ne pouvait pas se permettre de bogues</strong>
+                                        , il valait mieux
+                                        <strong>bien comprendre la technologie dès le départ</strong>
+                                        que de tout corriger par essais et erreurs.
                                     </p>
                                 </div>
                                 <div class="media">
@@ -223,9 +237,17 @@
                                 <div class="text">
                                     <h2>2. Collection et préparation des images de référence</h2>
                                     <p>
-                                        La tablette reconnaît les symboles en les comparant à des images de référence, alors leur qualité détermine directement la fiabilité
-                                        de la détection. J’ai donc pris des images nettes et propres, puis retiré tout ce qui n’avait pas besoin d’être détecté, puisque ces
-                                        éléments auraient pu brouiller la reconnaissance et faire apparaître le modèle 3D au mauvais endroit.
+                                        La tablette reconnaît les symboles en les comparant à des
+                                        <strong>images de référence</strong>
+                                        , alors
+                                        <strong>leur qualité détermine directement la fiabilité de la détection</strong>
+                                        . J’ai donc pris
+                                        <strong>des images nettes et propres</strong>
+                                        , puis
+                                        <strong>retiré tout ce qui n’avait pas besoin d’être détecté</strong>
+                                        , puisque ces éléments auraient pu brouiller la reconnaissance et
+                                        <strong>faire apparaître le modèle 3D au mauvais endroit</strong>
+                                        .
                                     </p>
                                 </div>
                                 <div class="media">
@@ -250,9 +272,15 @@
                                 <div class="text">
                                     <h2>3. Préparation de la recognition des symboles et du positionnement des objets</h2>
                                     <p>
-                                        Le panneau est massif et ne peut pas être déplacé, ce qui m’empêchait de répéter mes tests directement dessus. J’ai donc commencé
-                                        avec une image 2D que le logiciel pouvait reconnaître facilement, ce qui me permettait de faire mes premiers tests sans dépendre de
-                                        l’objet et de valider la logique de détection et de positionnement avant de passer à l’objet réel.
+                                        Le panneau est
+                                        <strong>massif et ne peut pas être déplacé</strong>
+                                        , ce qui m’empêchait de répéter mes tests directement dessus. J’ai donc commencé avec
+                                        <strong>une image 2D que le logiciel pouvait reconnaître facilement</strong>
+                                        , ce qui me permettait de faire mes premiers tests
+                                        <strong>sans dépendre de l’objet</strong>
+                                        et de
+                                        <strong>valider la logique de détection et de positionnement</strong>
+                                        avant de passer à l’objet réel.
                                     </p>
                                 </div>
                                 <div class="media">
@@ -268,9 +296,15 @@
                                 <div class="text">
                                     <h2>4. Reproduction en 3D des objets et traduction des symboles</h2>
                                     <p>
-                                        Pour que l’effet soit convaincant, les joueurs doivent retrouver chaque symbole traduit exactement à l’endroit où se trouve le
-                                        symbole d’origine, puisqu’un léger décalage suffit à créer de la confusion. J’ai donc porté une attention particulière à la
-                                        précision de la reproduction 3D, afin que ce que représente le modèle soit clair au premier coup d’œil.
+                                        Pour que l’effet soit convaincant, les joueurs doivent retrouver
+                                        <strong>chaque symbole traduit exactement à l’endroit où se trouve le symbole d’origine</strong>
+                                        , puisqu’un
+                                        <strong>léger décalage suffit à créer de la confusion</strong>
+                                        . J’ai donc porté une attention particulière à
+                                        <strong>la précision de la reproduction 3D</strong>
+                                        , afin que ce que représente le modèle soit
+                                        <strong>clair au premier coup d’œil</strong>
+                                        .
                                     </p>
                                 </div>
                             </div>
@@ -278,9 +312,15 @@
                                 <div class="text">
                                     <h2>5. “Fine tuning” de la position et échelle</h2>
                                     <p>
-                                        La tablette ne détecte jamais l’objet exactement à la même distance ni sous le même angle. J’ai donc rendu la position et l’échelle
-                                        ajustables à l’aide de variables « serialized » dans Unity, ce qui me permettait de les affiner rapidement et avec précision une
-                                        fois sur place, sans avoir à fouiller dans le code.
+                                        La tablette
+                                        <strong>ne détecte jamais l’objet exactement à la même distance ni sous le même angle</strong>
+                                        . J’ai donc rendu
+                                        <strong>la position et l’échelle ajustables</strong>
+                                        à l’aide de
+                                        <strong>variables « serialized » dans Unity</strong>
+                                        , ce qui me permettait de
+                                        <strong>les affiner rapidement et avec précision une fois sur place</strong>
+                                        , sans avoir à fouiller dans le code.
                                     </p>
                                 </div>
                                 <div class="imageswiper">
@@ -331,9 +371,19 @@
                     <div class="difficultes">
                         <h1>Les enjeux du projet</h1>
                         <p>
-                            Le public visé était très large, et certaines personnes ont peu de connaissances technologiques. L’application devait donc fonctionner en tout
-                            temps, sans bogues et rapidement, tout en traduisant les symboles parfaitement pour que le modèle 3D soit compris tout de suite. S’y ajoutaient
-                            l’apprentissage d’une nouvelle technologie et l’impossibilité de tester librement sur l’objet réel.
+                            Le
+                            <strong>public visé était très large</strong>
+                            , et certaines personnes ont
+                            <strong>peu de connaissances technologiques</strong>
+                            . L’application devait donc
+                            <strong>fonctionner en tout temps, sans bogues et rapidement</strong>
+                            , tout en
+                            <strong>traduisant les symboles parfaitement</strong>
+                            pour que le modèle 3D soit compris tout de suite. S’y ajoutaient
+                            <strong>l’apprentissage d’une nouvelle technologie</strong>
+                            et
+                            <strong>l’impossibilité de tester librement sur l’objet réel</strong>
+                            .
                         </p>
                     </div>
                 </div>
