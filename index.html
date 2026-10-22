@@ -13,6 +13,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YB1YNL0CH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-7YB1YNL0CH");
+    </script>
 </head>
 
 <body style="position: relative">
@@ -210,7 +222,7 @@
                 </p>
             </div>
             <div class="button-bar" data-component="MagneticButtons">
-                <a class="button hub-button" href="aboutme.html">
+                <a class="button hub-button" href="aboutme">
                     <div class="button-icon">
                         <svg class="icon icon--md">
                             <use href="#icon-AboutMe"></use>
@@ -218,7 +230,7 @@
                     </div>
                     <div class="button-title">À propos</div>
                 </a>
-                <a class="button hub-button" href="aboutme.html#projectlist">
+                <a class="button hub-button" href="aboutme#projectlist">
                     <div class="button-icon">
                         <svg class="icon icon--md">
                             <use href="#icon-Projets"></use>
@@ -226,7 +238,7 @@
                     </div>
                     <div class="button-title">Projets</div>
                 </a>
-                <a class="button hub-button" href="aboutme.html#videopresentation">
+                <a class="button hub-button" href="aboutme#videopresentation">
                     <div class="button-icon">
                         <svg class="icon icon--md">
                             <use href="#icon-Video"></use>
