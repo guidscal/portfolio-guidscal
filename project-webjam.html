@@ -128,14 +128,14 @@
             </svg>
         </div>
         <div class="right">
-            <a href="aboutme.html#projectCarousel" class="headerlink">Projets</a>
+            <a href="aboutme.html#projectlist" class="headerlink">Projets</a>
             <a href="assets/cvdownload/Guillaume_Callebert_CV_2026.pdf" download="CV_Guillaume_Callebert_2026.pdf" class="headerlink">CV</a>
         </div>
     </header>
     <div id="smooth-wrapper" data-component="SmoothScroller">
-        <div id="smooth-content">
+        <div id="smooth-content" data-component="Scrollbar">
 
-            <div class="projectdemo">
+            <div class="projectdemo" data-component="Scrollytelling">
                 <div class="wrapper">
                     <div class="projecthero">
                         <div class="projectmedia">
@@ -204,7 +204,7 @@
                         </div>
                     </div>
 
-                    <div class="projectintro">
+                    <section class="projectintro" id="projectintro" data-title="Introduction">
                         <h1>Avant de commencer...</h1>
                         <p>
                             Un WebJam est une compétition où une équipe doit livrer un
@@ -217,8 +217,8 @@
                             <strong>l’intégrateur (HTML, CSS, JS, WordPress et PHP)</strong>
                             .
                         </p>
-                    </div>
-                    <div class="projectcontent">
+                    </section>
+                    <section class="projectcontent" id="projectcontent" data-title="Étapes de réalisation">
                         <h1>Le processus</h1>
                         <div class="projectsteps">
                             <div class="step step1">
@@ -376,9 +376,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <div class="difficultes">
+                    <section class="difficultes" id="difficultes" data-title="Difficultés">
                         <h1>Les enjeux du projet</h1>
                         <p>
                             Le défi était de livrer un
@@ -393,13 +393,105 @@
                             <strong>chaque décision devait se prendre rapidement</strong>
                             , et où nous avons tous touché un peu à tout.
                         </p>
-                    </div>
+                    </section>
                 </div>
             </div>
 
             <footer>
                 <h2>Tous droits réservés © Guillaume Callebert</h2>
-                <p>L’intelligence artificielle a été utilisée de manière intelligente pour assister la création de cette page web. Son usage est limité à l'implémentation d'animations plus techniques utilisants des librairies comme GSAP qui me sont nouvelles. Tout code produit par l'IA a été vérifié et adapté pour son utilisation dans le contexte de cette page web. Tout autres éléments de la page ont été créés manuellement à l'aide des mes propres compétences techniques.</p>
+
+                <div class="aidisclosure" id="declaration-ia" data-component="AIDisclosure">
+                    <p class="aidisclosure__summary">
+                        Pour réaliser ce site, j’ai utilisé
+                        <strong>Claude (Anthropic)</strong>
+                        afin de
+                        <strong>programmer plusieurs animations et effets</strong>
+                        , de trouver des idées d’interface et de
+                        <strong>repérer les mots-clés mis en gras</strong>
+                        dans certaines fiches. Le design, la structure des pages et les contenus sont de moi.
+                    </p>
+
+                    <button class="button aidisclosure__toggle" type="button" aria-expanded="false" aria-controls="declaration-ia-panel" data-label-open="Masquer le détail">
+                        <span class="button-icon">
+                            <svg class="icon icon--md icon--stroke">
+                                <use href="#icon-AIBrain"></use>
+                            </svg>
+                        </span>
+                        <span class="button-title">Utilisation de l’IA : voir le détail</span>
+                    </button>
+
+                    <div class="aidisclosure__panel" id="declaration-ia-panel">
+                        <div class="aidisclosure__grid">
+                            <article class="aidisclosure__item aidisclosure__item--wide">
+                                <h3 class="aidisclosure__title">Code et animations</h3>
+                                <p>
+                                    J’ai utilisé Claude pour
+                                    <strong>générer, expliquer et corriger du code</strong>
+                                    , surtout avec GSAP, une librairie qui est nouvelle pour moi. Cela comprend :
+                                </p>
+                                <ul>
+                                    <li>le carrousel défilant des projets (glissement, inertie, arrêt au survol);</li>
+                                    <li>l’inclinaison 3D des cartes au survol;</li>
+                                    <li>l’animation néon et glitch du titre;</li>
+                                    <li>le curseur et la barre de défilement personnalisés;</li>
+                                    <li>les animations au défilement des pages (scrollytelling);</li>
+                                    <li>les effets du hub : fond interactif, animation d’entrée et boutons magnétiques;</li>
+                                    <li>le style et les légendes des galeries d’images des fiches.</li>
+                                </ul>
+                                <p>
+                                    J’ai personnellement fourni les maquettes, la structure HTML et la base des styles, choisi les effets retenus et intégré le code dans
+                                    mon propre système de composants. J’ai testé le résultat et signalé les bogues à corriger. Je maîtrise moins GSAP et les
+                                    animations avancées que le reste de mon code.
+                                </p>
+                            </article>
+
+                            <article class="aidisclosure__item">
+                                <h3 class="aidisclosure__title">Idées et brainstorm</h3>
+                                <p>
+                                    J’ai utilisé Claude pour obtenir
+                                    <strong>des pistes de curseur, de fond animé et de barre de défilement</strong>
+                                    . J’ai choisi, combiné et adapté les idées retenues.
+                                </p>
+                            </article>
+
+                            <article class="aidisclosure__item">
+                                <h3 class="aidisclosure__title">Mots-clés en gras des fiches</h3>
+                                <p>
+                                    J’ai utilisé Claude pour
+                                    <strong>repérer les mots-clés à mettre en gras</strong>
+                                    dans les fiches du niveau d’évasion, du traducteur en réalité augmentée, de la ville sur Unreal et du WebJam. Les textes
+                                    eux-mêmes n’ont pas été modifiés. J’ai fait ce travail moi-même pour la fiche Nid Bleu.
+                                </p>
+                            </article>
+
+                            <article class="aidisclosure__item">
+                                <h3 class="aidisclosure__title">Cette déclaration</h3>
+                                <p>
+                                    J’ai utilisé Claude pour
+                                    <strong>structurer et rédiger cette déclaration</strong>
+                                    à partir des gabarits de la Charte. Je l’ai révisée et je la mets à jour au besoin.
+                                </p>
+                            </article>
+
+                            <article class="aidisclosure__item">
+                                <h3 class="aidisclosure__title">Fait sans IA</h3>
+                                <p>
+                                    Le
+                                    <strong>design et la direction artistique</strong>
+                                    , la
+                                    <strong>structure HTML</strong>
+                                    , les
+                                    <strong>contenus des pages</strong>
+                                    et les
+                                    <strong>styles de base</strong>
+                                    ont été créés par moi. Les usages propres à chaque projet sont indiqués dans leur fiche.
+                                </p>
+                            </article>
+                        </div>
+
+                        <p class="aidisclosure__updated">Dernière mise à jour : 21 octobre 2026</p>
+                    </div>
+                </div>
             </footer>
         </div>
     </div>

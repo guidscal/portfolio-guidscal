@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guillaume Callebert</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+
+<body>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+        <!-- xl (≥ 1920px) -->
+        <filter id="neon-xl" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="9" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- base (1441px à 1919px) : ton rendu desktop actuel -->
+        <filter id="neon-base" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="7" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- lg (≤ 1440px) -->
+        <filter id="neon-lg" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="6" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- ml (≤ 1200px) -->
+        <filter id="neon-ml" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="5" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- md (≤ 1024px) -->
+        <filter id="neon-md" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="4" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- sm (≤ 768px) -->
+        <filter id="neon-sm" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="2" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="3" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+
+        <!-- xs (≤ 375px) -->
+        <filter id="neon-xs" x="-10%" y="-50%" width="120%" height="200%" color-interpolation-filters="sRGB">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1" result="grown" />
+            <feComposite in="grown" in2="SourceAlpha" operator="out" result="ring" />
+            <feFlood flood-color="#6bdfff" result="color" />
+            <feComposite in="color" in2="ring" operator="in" result="outline" />
+            <feGaussianBlur in="outline" stdDeviation="2" result="glow" />
+            <feMerge>
+                <feMergeNode in="glow" />
+                <feMergeNode in="glow" />
+                <feMergeNode in="outline" />
+            </feMerge>
+        </filter>
+    </svg>
+
+    <header class="" data-component="BubbleHeader" data-threshold="0.1">
+        <div class="left">
+            <a class="headerlink" href="index.html">Hub</a>
+            <a class="headerlink" href="aboutme.html">À propos</a>
+        </div>
+        <div class="center">
+            <svg class="icon icon--lg">
+                <use href="#icon-HeaderLogo"></use>
+            </svg>
+        </div>
+        <div class="right">
+            <a href="aboutme.html#projectlist" class="headerlink">Projets</a>
+            <a href="assets/cvdownload/Guillaume_Callebert_CV_2026.pdf" download="CV_Guillaume_Callebert_2026.pdf" class="headerlink">CV</a>
+        </div>
+    </header>
+    <div id="smooth-wrapper" data-component="SmoothScroller">
+        <div id="smooth-content" data-component="Scrollbar">
+            <div class="fourofour">
+                <div class="wrapper">
+                    <div class="logo-name">
+                        <h1 class="logo neon">404</h1>
+                        <h2>Oups! Cette page n'a pas été trouvée.</h2>
+                    </div>
+
+                    <a class="button hub-button" href="index.html">
+                        <div class="button-icon">
+                            <svg class="icon icon--md icon--circle icon--stroke">
+                                <use href="#icon-RightArrow"></use>
+                            </svg>
+                        </div>
+                        <div class="button-title">Revenir au hub</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
