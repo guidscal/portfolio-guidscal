@@ -4056,6 +4056,12 @@ html.has-scrollrail::-webkit-scrollbar {
     transition: none;
   }
 }
+.lightbox .button:hover {
+  color: var(--color-secondary);
+}
+.lightbox .button:hover svg {
+  background-color: rgba(0, 0, 0, 0);
+}
 
 :root {
   --pt-bg: var(--color-bg-primary, #0b0e12);
