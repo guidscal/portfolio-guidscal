@@ -14,6 +14,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
+    <script>
+        try {
+            var t = JSON.parse(sessionStorage.getItem("pagetransition"));
+            if (t && Date.now() - t.time < 5000) document.documentElement.classList.add("pt-cover");
+        } catch (e) {}
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YB1YNL0CH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -27,7 +34,7 @@
     </script>
 </head>
 
-<body data-component="Lightbox">
+<body data-component="PageTransition">
 
     <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
         <!-- xl (≥ 1920px) -->
@@ -148,7 +155,7 @@
         <div id="smooth-content" data-component="Scrollbar">
 
             <div class="projectdemo" data-component="Scrollytelling">
-                <div class="wrapper">
+                <div class="wrapper" data-component="Lightbox">
                     <div class="projecthero">
                         <div class="projectmedia">
                             <img src="assets/images/JV3/JV_Thumb.png" alt="" />
