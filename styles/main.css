@@ -3279,7 +3279,9 @@ footer p {
 }
 
 .projectcard {
-  --card-width: clamp(260px, 86vw, 480px);
+  --card-width: clamp(260px, 86vw, 550px);
+  container-type: inline-size;
+  container-name: projectcard;
   display: flex;
   flex-direction: column;
   flex: 0 0 var(--card-width);
@@ -3348,7 +3350,15 @@ footer p {
 }
 .projectcard .projecttags > :not(.contracttag) {
   white-space: nowrap;
+  max-width: 100%;
   margin: 0;
+}
+@container projectcard (max-width: 540px) {
+  .projectcard .projecttags > :not(.contracttag) {
+    white-space: normal;
+    text-wrap: balance;
+    text-align: center;
+  }
 }
 .projectcard .projecttags .contracttag {
   display: flex;
